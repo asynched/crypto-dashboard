@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+.container {
+  @apply mx-auto px-4 lg:px-0 w-full max-w-screen-xl;
+}
