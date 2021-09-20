@@ -10,8 +10,6 @@ function CurrenciesPage() {
   const [formatter] = useState(getUSDFormatter())
   const currencies = coinsData.data.coins
 
-  useEffect(() => console.log(currencies), [currencies])
-
   return (
     <BaseLayout title="Currencies">
       <section className="container">

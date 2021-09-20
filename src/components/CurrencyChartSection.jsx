@@ -20,7 +20,7 @@ function CurrencyChartSection({ currencyData }) {
   }
 
   return (
-    <div class="container mb-4">
+    <div className="container mb-4">
       <LineChart data={chartData} />
     </div>
   )

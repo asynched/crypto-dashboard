@@ -6,3 +6,9 @@ export const filterCurrencyHistory = history => {
     ).toLocaleDateString(),
   }))
 }
+
+export const filterExchangeVolume = exchanges =>
+  exchanges.slice(0, 10).map(({ name, volume }) => ({
+    name,
+    volume,
+  }))
