@@ -3,7 +3,7 @@ import React from 'react'
 function CurrencyAboutSectionLinks({ currencyData }) {
   return (
     <div>
-      <h2 className="mb-2 text-2xl font-semibold">{currencyData.name} links</h2>
+      <h2 className="mb-2 title text-2xl">{currencyData.name} links</h2>
       <div>
         {currencyData.links.map(link => (
           <div

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { getUSDFormatter } from '@utils/formatters'
-import IndexTopCryptoSectionCard from './IndexTopCryptoSectionCard'
+
+import CryptoCurrencyCard from './CryptoCurrencyCard'
+
 import coinsData from '../../coins.json'
 
 function IndexTopCryptoSection() {
@@ -12,8 +14,8 @@ function IndexTopCryptoSection() {
         Top 10 cryptocurrencies in the world
       </h1>
       <div className="grid grid-cols-2 xl:grid-cols-4 gap-8">
-        {coinsData.data.coins.map(coin => (
-          <IndexTopCryptoSectionCard
+        {coinsData.data.coins.slice(0, 12).map(coin => (
+          <CryptoCurrencyCard
             dailyChange={coin.change}
             marketCap={formatter.format(coin.marketCap)}
             iconURL={coin.iconUrl}

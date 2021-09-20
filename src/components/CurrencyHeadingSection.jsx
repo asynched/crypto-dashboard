@@ -2,7 +2,7 @@ import React from 'react'
 
 function CurrencyHeadingSection({ currencyData }) {
   return (
-    <section className="pt-8 mb-8 container">
+    <section className="pt-4 mb-8 container">
       <h1 className="mb-2 text-center title text-4xl">
         {currencyData.name} - {currencyData.symbol}
       </h1>

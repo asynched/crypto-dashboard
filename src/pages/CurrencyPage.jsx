@@ -3,10 +3,11 @@ import { useParams } from 'react-router'
 
 import CurrencyAboutSection from '@components/CurrencyAboutSection'
 import CurrencyHeadingSection from '@components/CurrencyHeadingSection'
-
-import coinsData from '../../coins.json'
 import CurrencyChartSection from '@components/CurrencyChartSection'
 import CurrencyStatisticsSection from '@components/CurrencyStatisticsSection'
+import BaseLayout from '@layouts/BaseLayout'
+
+import coinsData from '../../coins.json'
 
 function CurrencyPage() {
   const { currencyName } = useParams()
@@ -17,12 +18,12 @@ function CurrencyPage() {
   useEffect(() => console.log(currencyData), [currencyData])
 
   return (
-    <main className="min-h-screen bg-gray-200">
+    <BaseLayout title={currencyData.name}>
       <CurrencyHeadingSection currencyData={currencyData} />
       <CurrencyChartSection currencyData={currencyData} />
       <CurrencyStatisticsSection currencyData={currencyData} />
       <CurrencyAboutSection currencyData={currencyData} />
-    </main>
+    </BaseLayout>
   )
 }
 

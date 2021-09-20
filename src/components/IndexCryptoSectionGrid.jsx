@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import { getUSDFormatter } from '@utils/formatters'
+
 import IndexCryptoSectionGridInfo from './IndexCryptoSectionGridInfo'
 
 import coinsData from '../../coins.json'
-import { getUSDFormatter } from '@utils/formatters'
 
 function IndexCryptoSectionGrid() {
   const [formatter] = useState(getUSDFormatter())
