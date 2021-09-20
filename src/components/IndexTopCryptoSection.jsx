@@ -12,7 +12,7 @@ function IndexTopCryptoSection() {
 
   return (
     <div className="container pb-8">
-      <h1 className="mb-4 py-4 text-4xl font-semibold">
+      <h1 className="mb-4 py-4 title text-4xl">
         Top 10 cryptocurrencies in the world
       </h1>
       <div className="grid grid-cols-2 xl:grid-cols-4 gap-8">

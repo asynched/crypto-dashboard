@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function IndexTopCryptoSectionCard({
   name,
@@ -8,7 +9,10 @@ function IndexTopCryptoSectionCard({
   dailyChange,
 }) {
   return (
-    <div class="bg-white rounded transition duration-300 hover:shadow-xl">
+    <Link
+      to={`/currencies/${name}`}
+      className="bg-white rounded transition duration-300 hover:shadow-xl"
+    >
       <div className="p-4 flex items-center justify-between border-b">
         <h4 className="text-lg font-semibold">{name}</h4>
         <img src={iconURL} alt={`${name}'s icon`} className="w-8 h-8" />
@@ -18,7 +22,7 @@ function IndexTopCryptoSectionCard({
         <p>Market cap: {marketCap}</p>
         <p>Daily change: {dailyChange}%</p>
       </div>
-    </div>
+    </Link>
   )
 }
 
