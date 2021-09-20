@@ -2,14 +2,10 @@ import React, { useState } from 'react'
 import IndexCryptoSectionGridInfo from './IndexCryptoSectionGridInfo'
 
 import coinsData from '../../coins.json'
+import { getUSDFormatter } from '@utils/formatters'
 
 function IndexCryptoSectionGrid() {
-  const [formatter] = useState(
-    new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-    })
-  )
+  const [formatter] = useState(getUSDFormatter())
 
   return (
     <div className="grid grid-cols-2 gap-4">

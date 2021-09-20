@@ -1,14 +1,10 @@
 import React, { useState } from 'react'
-import coinsData from '../../coins.json'
+import { getUSDFormatter } from '@utils/formatters'
 import IndexTopCryptoSectionCard from './IndexTopCryptoSectionCard'
+import coinsData from '../../coins.json'
 
 function IndexTopCryptoSection() {
-  const [formatter] = useState(
-    new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-    })
-  )
+  const [formatter] = useState(getUSDFormatter())
 
   return (
     <div className="container pb-8">

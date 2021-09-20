@@ -4,15 +4,11 @@ import {
   HashtagIcon,
   LightningBoltIcon,
 } from '@heroicons/react/outline'
+import { getUSDFormatter } from '@utils/formatters'
 import CurrencyStatisticsSectionInfoContainer from './CurrencyStatisticsSectionInfoContainer'
 
 function CurrencyStatisticsSection({ currencyData }) {
-  const [formatter] = useState(
-    new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-    })
-  )
+  const [formatter] = useState(getUSDFormatter())
 
   return (
     <section className="my-8 container grid grid-cols-2 gap-4">
