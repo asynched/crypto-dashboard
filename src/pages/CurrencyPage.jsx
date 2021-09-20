@@ -6,6 +6,7 @@ import CurrencyHeadingSection from '@components/CurrencyHeadingSection'
 
 import coinsData from '../../coins.json'
 import CurrencyChartSection from '@components/CurrencyChartSection'
+import CurrencyStatisticsSection from '@components/CurrencyStatisticsSection'
 
 function CurrencyPage() {
   const { currencyName } = useParams()
@@ -19,6 +20,7 @@ function CurrencyPage() {
     <main className="min-h-screen bg-gray-200">
       <CurrencyHeadingSection currencyData={currencyData} />
       <CurrencyChartSection currencyData={currencyData} />
+      <CurrencyStatisticsSection currencyData={currencyData} />
       <CurrencyAboutSection currencyData={currencyData} />
     </main>
   )
