@@ -1,6 +1,6 @@
-import { filterExchangeVolume } from '@utils/charts'
 import React from 'react'
 import { Bar as BarChart } from 'react-chartjs-2'
+import { filterExchangeVolume } from '@utils/charts'
 
 function ExchangesVolumeChart({ exchanges }) {
   const chartData = filterExchangeVolume(exchanges)

@@ -5,7 +5,6 @@ import {
   CurrencyDollarIcon,
   CodeIcon,
 } from '@heroicons/react/outline'
-import { Link } from 'react-router-dom'
 import TheSidebarItem from './TheSidebarItem'
 
 function TheSidebar() {
@@ -36,6 +35,7 @@ function TheSidebar() {
       ))}
       <div className="pb-4 mt-auto">
         <TheSidebarItem
+          external
           link={{
             name: 'Repository',
             icon: CodeIcon,

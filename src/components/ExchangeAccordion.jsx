@@ -1,5 +1,5 @@
-import { getUSDFormatter } from '@utils/formatters'
 import React, { useState } from 'react'
+import { getUSDFormatter } from '@utils/formatters'
 
 function ExchangeAccordion({ exchange }) {
   const [formatter] = useState(getUSDFormatter())
